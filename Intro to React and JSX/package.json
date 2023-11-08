@@ -1,0 +1,24 @@
+{
+  "name": "react-november-2023-softuni-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stilchev/React-November-2023-SoftUni-Course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stilchev/React-November-2023-SoftUni-Course/issues"
+  },
+  "homepage": "https://github.com/Stilchev/React-November-2023-SoftUni-Course#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
