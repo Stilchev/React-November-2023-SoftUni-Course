@@ -1,21 +1,9 @@
 import { useState } from 'react'
 import MovieList from './components/MovieList';
 import './App.css'
+import movies from './assets/movies';
 
-const movies = [
-    {
-        title: 'The Matrix',
-        description: 'Some description'
-    },
-    {
-        title: 'Star Wars',
-        description: 'Some description'
-    },
-    {
-        title: 'Star Trek',
-        description: 'Some description'
-    },
-];
+
 
 function App() {
 
@@ -24,7 +12,7 @@ function App() {
         <div>
             <h1>My first dynamic react application!</h1>
 
-            <MovieList />
+            <MovieList movies={movies} />
         </div>
     )
 }
