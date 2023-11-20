@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 
 import styles from './App.module.css'
 
+import Starwars from './Starwars'
+
 function App() {
     const [numbers, setNumbers] = useState([1, 2, 3, 4, 5])
     const [count, setCount] = useState(0)
@@ -28,6 +30,8 @@ function App() {
 
     return (
         <div>
+            <Starwars />
+
             <h3>Count: {count}</h3>
 
             <ul>
