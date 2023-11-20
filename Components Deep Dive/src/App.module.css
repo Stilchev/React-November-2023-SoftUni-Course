@@ -1,0 +1,7 @@
+.listItem{
+    list-style: square;
+    background-color: aqua;
+    padding: 10px;
+    margin-left: 10px;
+    display: inline;
+}
