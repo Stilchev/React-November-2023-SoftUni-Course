@@ -9,11 +9,15 @@ const Characters = () => {
     const [characters, setCharacter] = useState([])
 
     useEffect(() => {
-        fetch(`${baseUrl}/people`)
+        const abortController = new AbortController()
+
+        fetch(`${baseUrl}/people`, {signal: abortController.signal})
             .then(response => response.json())
             .then(data => setCharacter(data.results))
 
-
+        return () => {
+            abortController.abort()
+        }
     }, [])
     return (
         <div className={styles.cardItem}>
