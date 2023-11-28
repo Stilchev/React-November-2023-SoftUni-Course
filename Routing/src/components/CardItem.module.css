@@ -1,0 +1,6 @@
+.cardItem{
+    display: flex;
+    background-color: lightgray;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
