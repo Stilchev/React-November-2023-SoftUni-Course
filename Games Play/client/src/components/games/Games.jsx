@@ -1,4 +1,4 @@
-export default function Catalogue() {
+export default function Games() {
     return(
         <section id="catalog-page">
       <h1>All Games</h1>
@@ -37,4 +37,4 @@ export default function Catalogue() {
       <h3 className="no-articles">No articles yet</h3>
     </section>
     )
-}
+};
