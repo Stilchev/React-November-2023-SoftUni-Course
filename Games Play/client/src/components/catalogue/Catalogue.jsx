@@ -1,28 +1,6 @@
-<>
-  <meta charSet="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/styles/style.css" />
-  <title>GamesPlay</title>
-  <div id="box">
-    <header>
-      {/* Navigation */}
-    
-    {/* Main Content */}
-    <main id="main-content"></main>
-    {/*Home Page*/}
-    
-    {/* Login Page ( Only for Guest users ) */}
-    
-    {/* Register Page ( Only for Guest users ) */}
-    
-    {/* Create Page ( Only for logged-in users ) */}
-    
-    {/* Edit Page ( Only for the creator )*/}
-    
-    {/*Details Page*/}
-    
-    {/* Catalogue */}
-    <section id="catalog-page">
+export default function Catalogue() {
+    return(
+        <section id="catalog-page">
       <h1>All Games</h1>
       {/* Display div: with information about every game (if any) */}
       <div className="allGames">
@@ -58,5 +36,5 @@
       {/* Display paragraph: If there is no games  */}
       <h3 className="no-articles">No articles yet</h3>
     </section>
-  </div>
-</>
+    )
+}
