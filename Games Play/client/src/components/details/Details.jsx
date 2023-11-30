@@ -2,15 +2,28 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
 import * as gameService from "../../services/gameService"
+import * as commentService from "../../services/commentService"
 
 export default function Details() {
     const [game, setGame] = useState({})
-    const {gameId} = useParams()
+    const { gameId } = useParams()
 
-    useEffect(()=> {
+    useEffect(() => {
         gameService.getOne(gameId)
             .then(setGame)
-    }, [gameId])
+    }, [gameId]);
+
+    const addCommentHandler = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.currentTarget)
+        const newComment = await commentService.create(
+            gameId,
+            formData.get('username'),
+            formData.get('comment')
+        )
+        console.log(newComment);
+    }
 
     return (
         <section id="game-details">
@@ -39,20 +52,21 @@ export default function Details() {
                     <p className="no-comment">No comments.</p>
                 </div>
                 {/* Edit/Delete buttons ( Only for creator of this game )  */}
-                <div className="buttons">
+                {/* <div className="buttons">
                     <a href="#" className="button">
                         Edit
                     </a>
                     <a href="#" className="button">
                         Delete
                     </a>
-                </div>
+                </div> */}
             </div>
             {/* Bonus */}
             {/* Add Comment ( Only for logged-in users, which is not creators of the current game ) */}
             <article className="create-comment">
                 <label>Add new comment:</label>
-                <form className="form">
+                <form className="form" onSubmit={addCommentHandler}>
+                    <input type="text" name="username" placeholder="Username" />
                     <textarea
                         name="comment"
                         placeholder="Comment......"
