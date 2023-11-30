@@ -26,7 +26,7 @@ export default function Details() {
             formData.get('username'),
             formData.get('comment')
         )
-        console.log(newComment);
+        setComments(state=> [...state, newComment])
     }
 
     return (
@@ -80,7 +80,8 @@ export default function Details() {
                     <input
                         className="btn submit"
                         type="submit"
-                        defaultValue="Add Comment"
+                        // defaultValue="Add Comment"
+                        value="Add Comment"
                     />
                 </form>
             </article>
